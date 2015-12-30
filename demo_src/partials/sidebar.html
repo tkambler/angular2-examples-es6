@@ -1,0 +1,9 @@
+<div class="list-group">
+    {{#each this.examples}}
+        {{#ifCond this.path.absolute "===" ../path.absolute }}
+            <a href="{{{ this.path.absolute }}}" class="list-group-item active">{{this.title}}</a>
+        {{else}}
+            <a href="{{{ this.path.absolute }}}" class="list-group-item">{{this.title}}</a>
+        {{/ifCond}}
+    {{/each}}
+</div>
