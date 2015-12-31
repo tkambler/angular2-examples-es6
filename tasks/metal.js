@@ -67,7 +67,11 @@ module.exports = (grunt) => {
                 'project_title': 'Angular 2.0 Examples'
             })
             .use(paths())
-            .use(collections())
+            .use(collections({
+                'examples': {
+                    'sortBy': 'position'
+                }
+            }))
             .use(function(files, metalsmith, done) {
 
                 _.each(files, (file) => {
